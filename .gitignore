@@ -2,3 +2,4 @@
 /.idea/
 *.iml
 CLIJ*.txt
+.DS_Store
