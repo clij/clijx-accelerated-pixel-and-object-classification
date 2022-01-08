@@ -64,7 +64,7 @@ Contributions are very welcome. Please refer to our [community guidelines](https
 
 ## License
 
-Distributed under the terms of the [BSD-3]() license,
+Distributed under the terms of the [BSD-3](https://github.com/clij/clijx-accelerated-pixel-and-object-classification/blob/main/license.txt) license,
 "clijx-accelerated-pixel-and-object-classification" is free and open source software
 
 ## Issues

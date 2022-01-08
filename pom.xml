@@ -56,14 +56,14 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:git://github.com/clij/clijx-weka</connection>
-        <developerConnection>scm:git:git@github.com/clij/clijx-weka</developerConnection>
+		<connection>scm:git:git://github.com/clij/clijx-accelerated-pixel-and-object-classification</connection>
+        <developerConnection>scm:git:git@github.com/clij/clijx-accelerated-pixel-and-object-classification</developerConnection>
         <tag>HEAD</tag>
-		<url>https://github.com/haesleinhuepf/clij-accelerated-pixel-and-object-classification</url>
+		<url>https://github.com/clij/clijx-accelerated-pixel-and-object-classification</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/haesleinhuepf/clij-accelerated-pixel-and-object-classification</url>
+		<url>https://github.com/clij/clijx-accelerated-pixel-and-object-classification</url>
 	</issueManagement>
 	<ciManagement>
 		<system>None</system>
