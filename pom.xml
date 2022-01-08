@@ -14,7 +14,7 @@
 
 	<groupId>net.haesleinhuepf</groupId>
 	<artifactId>clijx-accelerated-pixel-and-object-classification_</artifactId>
-	<version>0.1.0.0</version>
+	<version>0.6.0</version>
 
 	<name>clijx-accelerated-pixel-and-object-classification_</name>
 	<description>clijx-accelerated-pixel-and-object-classification_</description>
@@ -73,8 +73,9 @@
 		<package-name>net.haesleinhuepf</package-name>
 		<license.licenseName>bsd_3</license.licenseName>
 		<license.copyrightOwners>Robert Haase, MPI CBG</license.copyrightOwners>
-		<scijava.app.directory>C:/programs/fiji-win64/Fiji.app/</scijava.app.directory>
+		<!--<scijava.app.directory>C:/programs/fiji-win64/Fiji.app/</scijava.app.directory>-->
 		<!--<scijava.app.directory>/home/rhaase/programs/fiji/Fiji.app/</scijava.app.directory>-->
+		<scijava.app.directory>/Applications/Fiji.app/</scijava.app.directory>
 	</properties>
 
 	<dependencies>
