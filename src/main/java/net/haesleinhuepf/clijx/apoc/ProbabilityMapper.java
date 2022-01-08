@@ -15,6 +15,10 @@ import java.io.IOException;
 @Plugin(type = CLIJMacroPlugin.class, name = "CLIJx_probabilityMapper")
 public class ProbabilityMapper extends PixelClassifier {
 
+    public ProbabilityMapper(int number_of_input_images) {
+        super(number_of_input_images);
+    }
+
     @Override
     public String getDescription() {
         return "Applies a pre-trained APOC model to " + number_of_input_images + " image(s) to generate a probability image for a specific class. \n\n" +
