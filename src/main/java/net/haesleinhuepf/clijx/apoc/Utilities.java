@@ -55,11 +55,12 @@ public class Utilities {
         return feature_buffers;
     }
 
-    private static String[] preparseFeatures(String featureDefinitions) {
+    public static String[] preparseFeatures(String featureDefinitions) {
         featureDefinitions = featureDefinitions.toLowerCase();
         featureDefinitions = featureDefinitions.trim();
         featureDefinitions = featureDefinitions.replace("\r", " ");
         featureDefinitions = featureDefinitions.replace("\n", " ");
+        featureDefinitions = featureDefinitions.replace(",", " ");
         while (featureDefinitions.contains("  ")) {
             featureDefinitions = featureDefinitions.replace("  ", " ");
         }
