@@ -32,8 +32,9 @@ import static net.haesleinhuepf.clijx.apoc.Utilities.*;
 public class PixelClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPlugin, CLIJOpenCLProcessor, OffersDocumentation, IsCategorized, HasClassifiedInputOutput {
 
     private String help_text;
-    private int number_of_input_images = 1;
+    protected final int number_of_input_images;
     public PixelClassifier() {
+        number_of_input_images = 1;
         help_text = "Image input1, ByRef Image destination, String model_filename";
     }
 
