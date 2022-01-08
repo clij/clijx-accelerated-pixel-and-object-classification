@@ -66,8 +66,8 @@ public class ObjectClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPl
     public static void main(String[] args) throws IOException {
         new ImageJ();
 
-        ImagePlus imp = IJ.openImage("demo/blobs.tif");
-        String model_filename = "demo/ObjectClassifier.cl";
+        ImagePlus imp = IJ.openImage("docs/data/blobs.tif");
+        String model_filename = "docs/data/ObjectClassifier.cl";
 
         model_filename = new File(model_filename).getCanonicalPath();
 

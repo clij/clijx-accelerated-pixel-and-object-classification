@@ -20,8 +20,8 @@ public class ProbabilityMapper_2 extends ProbabilityMapper {
     public static void main(String[] args) throws IOException {
         new ImageJ();
 
-        ImagePlus imp = IJ.openImage("demo/blobs.tif");
-        String model_filename = "demo/ProbabilityMapper2.cl";
+        ImagePlus imp = IJ.openImage("docs/data/blobs.tif");
+        String model_filename = "docs/data/ProbabilityMapper2.cl";
 
         model_filename = new File(model_filename).getCanonicalPath();
 
