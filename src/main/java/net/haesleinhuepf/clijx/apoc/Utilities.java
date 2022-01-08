@@ -18,15 +18,18 @@ public class Utilities {
     public static final String CLASSIFIER_CLASS_NAME_KEY = "classifier_class_name = ";
     public static final String POSITIVE_CLASS_IDENTIFIER_KEY = "positive_class_identifier = ";
 
-    public static void checkModelApplicability(String model_filename, String klassName) {
+    public static boolean checkModelApplicability(String model_filename, String klassName) {
         if (!new File(model_filename).exists()) {
-            throw new IllegalArgumentException("Model " + model_filename + " not found. Cancelling PixelClassifier.");
+            System.out.println("Model " + model_filename + " not found. Cancelling PixelClassifier.");
+            return false;
         }
 
         String file_classifier = readSomethingFromOpenCLFile(model_filename, CLASSIFIER_CLASS_NAME_KEY, "Unknown");
         if (klassName.compareTo(file_classifier) != 0) {
-            throw new IllegalArgumentException("A classifier of type " + file_classifier + " cannot be applied using " + klassName);
+            System.out.println("A classifier of type " + file_classifier + " cannot be applied using " + klassName);
+            return false;
         }
+        return true;
     }
 
     public static ArrayList<ClearCLBuffer> generateFeatureStack(CLIJ2 clij2, ClearCLBuffer input, String featureDefinitions) {

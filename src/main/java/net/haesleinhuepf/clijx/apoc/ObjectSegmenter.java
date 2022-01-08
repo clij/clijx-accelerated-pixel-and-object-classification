@@ -12,8 +12,7 @@ import org.scijava.plugin.Plugin;
 import java.io.File;
 import java.io.IOException;
 
-import static net.haesleinhuepf.clijx.apoc.Utilities.POSITIVE_CLASS_IDENTIFIER_KEY;
-import static net.haesleinhuepf.clijx.apoc.Utilities.readSomethingFromOpenCLFile;
+import static net.haesleinhuepf.clijx.apoc.Utilities.*;
 
 @Plugin(type = CLIJMacroPlugin.class, name = "CLIJx_objectSegmenter")
 public class ObjectSegmenter extends PixelClassifier {
@@ -34,6 +33,22 @@ public class ObjectSegmenter extends PixelClassifier {
 
     public String getDefaultClassifierFilename() {
         return "ObjectSegmenter.cl";
+    }
+
+    @Override
+    public boolean executeCL() {
+        ClearCLBuffer[] inputs = new ClearCLBuffer[number_of_input_images];
+        for (int i = 0; i < number_of_input_images; i ++) {
+            inputs[i] = (ClearCLBuffer) args[i];
+        }
+        ClearCLBuffer output = (ClearCLBuffer) args[number_of_input_images];
+
+        String model_filename = (String) args[number_of_input_images + 1];
+
+        if (checkModelApplicability(model_filename, getClass().getSimpleName().split("_")[0])) {
+            return objectSegmenter(getCLIJ2(), inputs, output, model_filename);
+        }
+        return false;
     }
 
     public static boolean objectSegmenter(CLIJ2 clij2, ClearCLBuffer[] inputs, ClearCLBuffer output, String model_filename) {

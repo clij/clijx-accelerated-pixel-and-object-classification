@@ -46,9 +46,10 @@ public class ObjectClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPl
 
         String model_filename = (String) args[3];
 
-        checkModelApplicability(model_filename, getClass().getSimpleName().split("_")[0]);
-
-        return objectClassifier(getCLIJ2(), intensity_input, labels_input, output, model_filename);
+        if (checkModelApplicability(model_filename, getClass().getSimpleName().split("_")[0])) {
+            return objectClassifier(getCLIJ2(), intensity_input, labels_input, output, model_filename);
+        }
+        return false;
     }
 
     @Override

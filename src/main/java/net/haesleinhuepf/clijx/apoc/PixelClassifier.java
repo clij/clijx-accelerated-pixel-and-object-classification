@@ -61,9 +61,10 @@ public class PixelClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPlu
 
         String model_filename = (String) args[number_of_input_images + 1];
 
-        checkModelApplicability(model_filename, getClass().getSimpleName().split("_")[0]);
-
-        return pixelClassifier(getCLIJ2(), inputs, output, model_filename);
+        if (checkModelApplicability(model_filename, getClass().getSimpleName().split("_")[0])) {
+            return pixelClassifier(getCLIJ2(), inputs, output, model_filename);
+        }
+        return false;
     }
 
     @Override
