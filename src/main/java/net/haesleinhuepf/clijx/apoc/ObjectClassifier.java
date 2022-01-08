@@ -157,7 +157,7 @@ public class ObjectClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPl
 
     @Override
     public String getInputType() {
-        return "Image";
+        return "Label Image";
     }
 
     @Override

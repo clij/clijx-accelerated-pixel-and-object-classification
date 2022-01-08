@@ -221,7 +221,7 @@ class LabelFeatureGenerator {
     private ResultsTable getStatistics() {
         if (statistics_of_labels == null) {
             statistics_of_labels = new ResultsTable();
-            clij2.statisticsOfLabelledPixels(input, label_map, statistics_of_labels);
+            clij2.statisticsOfBackgroundAndLabelledPixels(input, label_map, statistics_of_labels);
         }
         return statistics_of_labels;
     }
