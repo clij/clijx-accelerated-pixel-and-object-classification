@@ -35,6 +35,11 @@ public class ProbabilityMapper extends PixelClassifier {
         return pixelClassifier(clij2, inputs, output, model_filename);
     }
 
+    @Override
+    public String getOutputType() {
+        return "Image";
+    }
+
     public static void main(String[] args) throws IOException {
         new ImageJ();
 
@@ -54,4 +59,6 @@ public class ProbabilityMapper extends PixelClassifier {
 
         clij2.show(output, "output");
     }
+
+
 }
