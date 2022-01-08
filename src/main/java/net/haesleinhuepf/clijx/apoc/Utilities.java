@@ -16,6 +16,7 @@ public class Utilities {
 
     public static final String FEATURE_SPECIFICATION_KEY = "feature_specification = ";
     public static final String CLASSIFIER_CLASS_NAME_KEY = "classifier_class_name = ";
+    public static final String POSITIVE_CLASS_IDENTIFIER_KEY = "positive_class_identifier = ";
 
     public static void checkModelApplicability(String model_filename, String klassName) {
         if (!new File(model_filename).exists()) {

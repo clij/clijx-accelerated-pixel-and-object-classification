@@ -59,6 +59,4 @@ public class ProbabilityMapper extends PixelClassifier {
 
         clij2.show(output, "output");
     }
-
-
 }
