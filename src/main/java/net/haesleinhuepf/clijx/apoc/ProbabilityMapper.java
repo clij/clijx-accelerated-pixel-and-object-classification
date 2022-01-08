@@ -15,6 +15,10 @@ import java.io.IOException;
 @Plugin(type = CLIJMacroPlugin.class, name = "CLIJx_probabilityMapper")
 public class ProbabilityMapper extends PixelClassifier {
 
+    public ProbabilityMapper() {
+        this(1);
+    }
+
     public ProbabilityMapper(int number_of_input_images) {
         super(number_of_input_images);
     }
@@ -24,6 +28,10 @@ public class ProbabilityMapper extends PixelClassifier {
         return "Applies a pre-trained APOC model to " + number_of_input_images + " image(s) to generate a probability image for a specific class. \n\n" +
                 "Read more about how to train these models:\n" +
                 "https://github.com/haesleinhuepf/napari-accelerated-pixel-and-object-classification";
+    }
+
+    public String getDefaultClassifierFilename() {
+        return "ProbabilityMapper.cl";
     }
 
     @Override

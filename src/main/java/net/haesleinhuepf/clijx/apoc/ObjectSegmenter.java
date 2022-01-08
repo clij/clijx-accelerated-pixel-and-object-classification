@@ -18,6 +18,9 @@ import static net.haesleinhuepf.clijx.apoc.Utilities.readSomethingFromOpenCLFile
 @Plugin(type = CLIJMacroPlugin.class, name = "CLIJx_objectSegmenter")
 public class ObjectSegmenter extends PixelClassifier {
 
+    public ObjectSegmenter() {
+        this(1);
+    }
     public ObjectSegmenter(int number_of_input_images) {
         super(number_of_input_images);
     }
@@ -27,6 +30,10 @@ public class ObjectSegmenter extends PixelClassifier {
         return "Applies a pre-trained APOC model to " + number_of_input_images + " image(s) to segment objects and generate a label image. \n\n" +
                 "Read more about how to train these models:\n" +
                 "https://github.com/haesleinhuepf/napari-accelerated-pixel-and-object-classification";
+    }
+
+    public String getDefaultClassifierFilename() {
+        return "ObjectSegmenter.cl";
     }
 
     public static boolean objectSegmenter(CLIJ2 clij2, ClearCLBuffer[] inputs, ClearCLBuffer output, String model_filename) {

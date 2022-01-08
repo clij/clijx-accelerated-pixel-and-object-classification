@@ -34,8 +34,7 @@ public class PixelClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPlu
     private String help_text;
     protected final int number_of_input_images;
     public PixelClassifier() {
-        number_of_input_images = 1;
-        help_text = "Image input1, ByRef Image destination, String model_filename";
+        this(1);
     }
 
     public PixelClassifier(int number_of_input_images) {
