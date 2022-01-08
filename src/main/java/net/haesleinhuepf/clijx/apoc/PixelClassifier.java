@@ -126,7 +126,6 @@ public class PixelClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPlu
         int count = 0;
         for (ClearCLBuffer feature : featureImages) {
             parameters.put("in" + count, feature);
-            clij2.show(feature, "in" + count);
             count = count + 1;
         }
         parameters.put("out", output);
@@ -149,7 +148,7 @@ public class PixelClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPlu
 
     @Override
     public String getCategories() {
-        return "Machine Learning, Segmentation";
+        return "Machine Learning, Segmentation, Labeling";
     }
 
     @Override

@@ -44,6 +44,11 @@ public class ProbabilityMapper extends PixelClassifier {
     }
 
     @Override
+    public String getCategories() {
+        return "Machine Learning, Filtering";
+    }
+
+    @Override
     public String getOutputType() {
         return "Image";
     }
