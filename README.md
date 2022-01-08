@@ -12,7 +12,7 @@ It is the sibling of [napari-accelerated-pixel-and-object-classification](https:
 
 * Download and install [Fiji](https://fiji.sc/Downloads). 
 * Activate the update-sites "apoc", "clij" and "clij2" as explained [here](https://clij.github.io/clij2-docs/installationInFiji). 
-* Optional: If you want to use the APOC classifiers from the [clijx-assistant](https://github.com/clij/clijx-assistant), please activate the "clijx-assistant" update-site as well. Note: In case you want to install the clijx-assistant-extensions (which is not necessary), please read the [installation instructions](https://clij.github.io/assistant/installation#extensions).
+* Optional: If you want to use the APOC classifiers from the [clijx-assistant](https://github.com/clij/clijx-assistant) graphical user interface, please activate the "clijx-assistant" update-site as well. Note: In case you want to install the clijx-assistant-extensions (which is not necessary), please read the [installation instructions](https://clij.github.io/assistant/installation#extensions).
 * Restart Fiji.
 
 ## Usage: Classifier training
@@ -64,7 +64,7 @@ Contributions are very welcome. Please refer to our [community guidelines](https
 
 ## License
 
-Distributed under the terms of the [BSD-3] license,
+Distributed under the terms of the [BSD-3]() license,
 "clijx-accelerated-pixel-and-object-classification" is free and open source software
 
 ## Issues
