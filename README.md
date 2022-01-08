@@ -39,6 +39,10 @@ Enter the correct path to the classifier file in the text field and click on `Re
 
 ![img_2.png](images/img_2.png)
 
+The `ObjectClassifier` can be found in the `Label processing` category of the right-click menu. It works analogously to the `ObjectSegmenter`:
+
+![img.png](docs/img.png)
+
 ## Usage: Scripting
 
 You can use the assistant's code generation capabilities, by right-clicking and selecting the menu `Generate Script > ImageJ Macro`:

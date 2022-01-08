@@ -20,8 +20,8 @@ public class PixelClassifier_2 extends PixelClassifier {
     public static void main(String[] args) throws IOException {
         new ImageJ();
 
-        ImagePlus imp = IJ.openImage("demo/blobs.tif");
-        String model_filename = "demo/PixelClassifier2.cl";
+        ImagePlus imp = IJ.openImage("docs/data/blobs.tif");
+        String model_filename = "docs/data/PixelClassifier2.cl";
 
         model_filename = new File(model_filename).getCanonicalPath();
 

@@ -81,8 +81,8 @@ public class PixelClassifier extends AbstractCLIJ2Plugin implements CLIJMacroPlu
     public static void main(String[] args) throws IOException {
         new ImageJ();
 
-        ImagePlus imp = IJ.openImage("demo/blobs.tif");
-        String model_filename = "demo/PixelClassifier.cl";
+        ImagePlus imp = IJ.openImage("docs/data/blobs.tif");
+        String model_filename = "docs/data/PixelClassifier.cl";
 
         model_filename = new File(model_filename).getCanonicalPath();
 
