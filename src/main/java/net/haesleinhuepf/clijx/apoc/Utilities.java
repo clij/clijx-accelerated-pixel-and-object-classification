@@ -132,7 +132,7 @@ public class Utilities {
             } else {
                 clij2.differenceOfGaussian3D(input, output, numericParameter * 0.9, numericParameter * 0.9, numericParameter * 0.9, numericParameter * 1.1, numericParameter * 1.1, numericParameter * 1.1);
             }
-        } else if (featureName.compareTo("sobelofgaussian") == 0 || featureName.compareTo"sobel_of_gaussian_blur") == 0) {
+        } else if (featureName.compareTo("sobelofgaussian") == 0 || featureName.compareTo("sobel_of_gaussian_blur") == 0) {
             String midfix = "";
             if (featureName.contains("_")) {
                 midfix = "_";
